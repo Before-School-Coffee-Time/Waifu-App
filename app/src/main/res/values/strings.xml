@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Waifu-App</string>
-    <string name='test'>This is a test</string>
-    <string name='followup'>The click works</string>
+    <string name='test'>Welcome to the early Waifu App. Please click to continue.</string>
+    <string name='followup1'>As you can see there is a background, textview, and character currently implemented</string>
+    <string name='followup2'>So far that is all I have.</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>

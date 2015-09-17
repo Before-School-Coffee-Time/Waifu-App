@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
     }
 
@@ -39,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
     public void testButton(View v)
     {
         TextView text = (TextView) findViewById(R.id.textbox1);
-        text.setText("test part 2");
+
+        if(text.getText().equals("As you can see there is a background, textview, and character currently implemented"))
+            text.setText(R.string.followup2);
+        else if(text.getText().equals("Welcome to the early Waifu App. Please click to continue."))
+            text.setText(R.string.followup1);
     }
 }

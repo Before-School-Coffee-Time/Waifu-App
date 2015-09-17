@@ -8,15 +8,52 @@
     android:id="@+id/MainScreen"
     android:nestedScrollingEnabled="false">
 
-    <TextView android:text="@string/test" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textbox1"
-        android:layout_alignParentTop="true"
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/background"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="392dp"
-        android:clickable="true"
-        android:enabled="true"
-        android:onClick="testButton" />
+        android:background="@drawable/background"
+        android:layout_margin="0dp" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:id="@+id/imageView"
+            android:background="@drawable/character"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView android:text="@string/test" android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:id="@+id/textbox1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:onClick="testButton"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="#010101" />
+
+
+
+    </LinearLayout>
 </RelativeLayout>
