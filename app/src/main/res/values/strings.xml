@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Waifu-App</string>
     <string name='test'>This is a test</string>
+    <string name='followup'>The click works</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>
