@@ -29,22 +29,20 @@
         android:layout_alignParentStart="true">
 
         <ImageView
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_weight=".2"/>
-
-        <ImageView
             android:layout_width="300dp"
             android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_weight=".6"
             android:clickable="true"
             android:onClick="poke"
             android:id="@+id/imageView"
-            android:background="@drawable/character" />
+            android:background="@drawable/character"
+            android:layout_marginTop="100dp" />
 
-        <TextView android:text="@string/test" android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2"
+        <TextView android:text="@string/test"
+            android:layout_width="352dp"
+            android:layout_height="94dp"
+            android:layout_gravity="center"
             android:id="@+id/textbox1"
             android:clickable="true"
             android:enabled="true"
@@ -52,8 +50,6 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:background="#010101" />
-
-
 
     </LinearLayout>
 </RelativeLayout>
