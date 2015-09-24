@@ -1,6 +1,7 @@
 package bsct.waifu_app;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -53,7 +54,23 @@ public class MainActivity extends Activity {
     public void poke(View V) {
         TextView text = (TextView) findViewById(R.id.textbox1);
 
-        if(text.getText().equals("So far that is all I have."))
+        SharedPreferences prefs = getSharedPreferences("WaifuApp", MODE_PRIVATE);
+
+        long currentTime = System.currentTimeMillis();
+        long previousPoke = prefs.getLong("PokeTime", -1);
+
+        System.out.println(previousPoke + " and " + currentTime);
+
+        if(previousPoke != -1){
+            long timeDifference = currentTime - previousPoke;
+            timeDifference = timeDifference /1000;
+            int seconds = (int)timeDifference % 60;
+            int minutes = (int)timeDifference / 60;
+            text.setText("It's been " + minutes + " minutes and " + seconds + " seconds since you last poked me");
+        }
+        else {
             text.setText(R.string.poked);
+        }
+        prefs.edit().putLong("PokeTime", currentTime).apply();
     }
 }
